@@ -1,0 +1,160 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLActor</id><coordinates><x>130</x><y>40</y><w>80</w><h>110</h></coordinates><panel_attributes>Developer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>280</x><y>0</y><w>260</w><h>40</h></coordinates><panel_attributes>Get a Regex which follows the need</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>10</y><w>110</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;60;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>260</y><w>1290</w><h>590</h></coordinates><panel_attributes>Get a Regex which follows the need
+-
+-
+"Dev" goes to "main page".
+
+Dev enter sample into "text box sample" and press "button step enter sample finished".
+
+App "displays the content: select part to capture".
+
+Dev selects "part to capture" and press "button step select part to capture finished".
+
+App "displays the content: select matching exactly".
+
+Dev selects a list of "parts matching exactly" by selecting every "part matching exactly" and press everytime "button add this exact matching part". Then dev press "button step select matching exactly finished".
+
+App "displays the content: select variable part".
+
+Dev selects a list of "variable parts" by selecting every "variable part" and press everytime "button add this variable part". Then dev press "button step select variable part finished".
+
+App "displays the content: setting types".
+
+For each "variable part" dev selects a list of its "types" by selecting every "type" and select every time its type in a "type dropdown" and press everytime "button add this type". Then dev press "button step setting types finished".
+
+App "displays the content: select nb occ".
+
+For each "type" dev selects its "number of occurence" and press "button step select nb occ finished".
+
+App "displays the content: setting word start end".
+
+Dev set if there is a "word start" or a "word end" and press "button step setting word start end finished".
+
+App "displays the content: setting line or string start end".
+
+Dev set if there is a "line or string start" or a "line or string end" and press "button step setting line or string start end finished".
+
+App "displays the content: Regex built".
+
+Dev can press "button copy in clip board".</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>2740</y><w>210</w><h>880</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>860</y><w>360</w><h>360</h></coordinates><panel_attributes>MainPage
+-
+-
+Public:
+tb_sample: TextBox
+bt_enter_sample_finished: Button
+bt_select_part_to_capture_finished: Button
+bt_add_this_exact_matching_part: Button
+bt_select_exact_matching_parts_finished: Button
+bt_add_this_variable_part: Button
+bt_select_variable_parts_finished: Button
+bt_add_this_type: Button
+bt_setting_types_finished: Button
+bt_select_nb_occ_finished: Button
+bt_setting_word_start_end_finished: Button
+bt_setting_line_or_string_start_end_finished: Button
+bt_copy_regex_to_clipboard: Button
+
+tb_search_regex_by_behaviour: Textbox
+dg_Regexs_with_matching_behaviour: DataGrid
+bt_copy_Regex_to_clipboard: Button</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>1330</y><w>230</w><h>210</h></coordinates><panel_attributes>Service__Display
+-
+-
+Public:
+DisplaySelectPartsToCapture(): Sample
+DisplaySelectMatchingExactly(): PartsToCapture
+DisplaySelectVariableParts(): PartsMatchingExactly
+DisplaySettingTypes(): PartsVariable
+DisplaySelectNbOcc(): Types
+DisplaySettingWordStartEnd(): 
+DisplaySettingLineOrStringStartEnd()
+DisplayRegexBuilt()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>2130</y><w>210</w><h>90</h></coordinates><panel_attributes>PartsMatchingExactly
+-
+-
+Public:
+parts_matching_exactly: List&lt;Part&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>2130</y><w>210</w><h>90</h></coordinates><panel_attributes>PartsVariable
+-
+-
+Public:
+parts_variable: List&lt;Part&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1360</x><y>2590</y><w>210</w><h>90</h></coordinates><panel_attributes>Type
+-
+-
+Public:
+type:  enum</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1670</x><y>2590</y><w>210</w><h>110</h></coordinates><panel_attributes>NbOfOcc
+-
+-
+Public:
+low: int
+high. int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>2250</y><w>210</w><h>80</h></coordinates><panel_attributes>LineStringStartEnd
+-
+-
+Public:
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>2590</y><w>210</w><h>80</h></coordinates><panel_attributes>WordStartEnd
+-
+-
+Public:
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>2340</y><w>210</w><h>130</h></coordinates><panel_attributes>StartEnd
+-
+-
+Public:
+there_is_a start: bool
+there_is_a_end: bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>2280</y><w>70</w><h>160</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;140;10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>2410</y><w>110</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;10;60;210;90;210</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>1210</y><w>90</w><h>140</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;80;70;80;70;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>2590</y><w>210</w><h>90</h></coordinates><panel_attributes>Part
+-
+-
+Public:
+text_value: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>1960</y><w>210</w><h>90</h></coordinates><panel_attributes>Sample
+-
+-
+Public:
+text_value: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1370</x><y>2430</y><w>210</w><h>90</h></coordinates><panel_attributes>Types
+-
+-
+Public:
+types:  List&lt;Type&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>1960</y><w>210</w><h>90</h></coordinates><panel_attributes>PartsToCapture
+-
+-
+Public:
+parts_to_capture: Part</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1140</x><y>1790</y><w>210</w><h>90</h></coordinates><panel_attributes>Step
+-
+-
+Public:
+actual_step: enumStep</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>1530</y><w>230</w><h>280</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;10;180;200;180;200;260</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>1870</y><w>200</w><h>110</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>180;10;180;30;10;30;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>1870</y><w>40</w><h>110</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>2040</y><w>180</w><h>110</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;10;60;150;60;150;90</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>2040</y><w>480</w><h>110</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;10;40;450;40;450;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1150</x><y>2210</y><w>30</w><h>80</h></coordinates><panel_attributes>m2=*</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>2210</y><w>30</w><h>150</h></coordinates><panel_attributes>m2=*</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>2040</y><w>160</w><h>570</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;10;470;130;470;130;550</additional_attributes></element><element><id>Relation</id><coordinates><x>1260</x><y>2470</y><w>130</w><h>40</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1460</x><y>2510</y><w>30</w><h>100</h></coordinates><panel_attributes>m2=*</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1560</x><y>2630</y><w>130</w><h>40</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>1790</y><w>210</w><h>90</h></coordinates><panel_attributes>RegexSettings
+-
+-
+Public:
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>2270</y><w>210</w><h>90</h></coordinates><panel_attributes>Part_variable
+-
+-
+Public:
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>2510</y><w>320</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;50;300;50;300;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>2040</y><w>100</w><h>230</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>80;10;80;150;10;150;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>1530</y><w>300</w><h>280</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>280;10;280;190;10;190;10;260</additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>1790</y><w>230</w><h>160</h></coordinates><panel_attributes>Service__Built_Regex
+-
+-
+Public:
+ConvertRegexSettingsToRegex()
+
+Private:
+ConvertAPartToRegex(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>2430</y><w>210</w><h>90</h></coordinates><panel_attributes>Part_Variable_Typed
+-
+-
+Public:
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1150</x><y>2350</y><w>30</w><h>100</h></coordinates><panel_attributes>m2=*</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>1440</y><w>290</w><h>40</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>270;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>1830</y><w>180</w><h>40</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>1330</y><w>230</w><h>350</h></coordinates><panel_attributes>Service__AddPart
+-
+-
+Public:
+AddPartToPartToCapture()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>1210</y><w>250</w><h>140</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>230;10;230;80;10;80;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>1670</y><w>120</w><h>140</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;10;60;90;60;90;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>2340</y><w>210</w><h>90</h></coordinates><panel_attributes>PartMatchingExactly
+-
+-
+Public:
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>2420</y><w>30</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>1530</y><w>40</w><h>280</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>10;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>2630</y><w>170</w><h>40</h></coordinates><panel_attributes>m2=1</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>280</x><y>60</y><w>260</w><h>40</h></coordinates><panel_attributes>Select a Regex in a list of favorite</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>50</y><w>110</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;90;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1320</x><y>260</y><w>480</w><h>260</h></coordinates><panel_attributes>Select a Regex in a list of favorite
+-
+-
+"Dev" goes to "main page".
+
+Dev write the "behaviour of the regex" into the "textbox search regex by behaviour".
+
+The app "searchs "Regexs with matching behaviors" into the list of favorite.
+
+The app "displays Regexs with matching behaviour" into the grid "Regexs with matching behaviour".
+
+The Dev selects the "Desired Regex".
+
+The Dev click on "button copy Regex to clipboard" to store Regex in the clipboard.
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
